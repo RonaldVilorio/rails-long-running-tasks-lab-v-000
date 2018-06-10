@@ -48,7 +48,7 @@ class SongsController < ApplicationController
     # binding.pry
     CSV.foreach(params[:file].path, headers: true) do |lead|
       # binding.pry
-      Song.create(song_name: lead[0], artist_name: lead[1], release_year: lead[2])
+      Song.create(name: lead[0], artist_name: lead[1], release_year: lead[2])
     end
     redirect_to songs_path
   end
