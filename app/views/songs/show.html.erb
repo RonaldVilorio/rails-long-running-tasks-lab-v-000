@@ -1,8 +1,5 @@
 <h1><%= link_to @song.title, song_path(@song) %></h1>
-<%= form_tag songs_upload_path, multipart: true do %>
-  <%= file_field_tag :title %>
-  <%= submit_tag "file" %>
-<% end %>
+
 <h3> by <%= display_artist(@song) %></h3>
 
 <%= link_to "All Songs", songs_path %>
