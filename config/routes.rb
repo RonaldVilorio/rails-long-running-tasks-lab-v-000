@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   resources :artists, :songs
-  get 'artists/upload', to: 'artists#upload'
+  post 'songs/upload', to: 'songs#upload'
 end
